@@ -9,14 +9,8 @@ function cd_visulaiz() {
   cd_render.innerHTML = ""
  } else {
   cd_render.value = 1
-  cd_render.innerHTML = "<table id='cd_renderMe'></table>"
-  for (i=0;i<cd_prepVis().length;i++){
-    document.getElementById('cd_renderMe').innerHTML += '<tr class="cd_renderMe"></tr>'
-    for (j=0;j<cd_prepVis()[0].length;j++){
-      document.getElementById('cd_renderMe').innerHTML += '<tr class="cd_renderMe"></tr>'
-
-  }
- }}
+  cd_render.innerHTML = cd_makeTableHTML(cds)
+}
  return document.getElementsByTagName('cd_render')[0].value;
 }
 
@@ -27,4 +21,18 @@ for (i=0;i<cd.length;i++){
   cd[i][2] = cd[i][2] - now
 }
 return cd
+}
+
+function cd_makeTableHTML(myArray) {
+  var result = "<table border=1>";
+  for(var i=0; i<myArray.length; i++) {
+      result += "<tr>";
+      for(var j=0; j<myArray[i].length; j++){
+          result += "<td>"+myArray[i][j]+"</td>";
+      }
+      result += "</tr>";
+  }
+  result += "</table>";
+
+  return result;
 }
