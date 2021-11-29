@@ -1,5 +1,8 @@
 //cookie = [string,number,number]
 
+function cd_visulaiz_RL(){
+  document.getElementsByTagName('cd_render')[0].innerHTML = cd_makeTableHTML(cd_prepVis())
+}
 
 function cd_visulaiz() {
   var cds = cd_prepVis()
