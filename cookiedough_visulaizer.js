@@ -33,7 +33,7 @@ function cd_makeTableHTML(myArray) {
       result += "</tr>";
   }
   result += "</table>";
-
+  // result+= "<style>table.cd_render_table{ font-family:Arial, Helvetica, sans-serif;border:2px solid #000000;background-color:#4A4A4A;width:100%;height:200px;text-align:left;border-collapse:collapse;}table.cd_render_table td, table.cd_render_table th{ border:1px solid #4A4A4A;padding:3px 3px;}table.cd_render_table tbody td{ font-size:13px;color:#E6E6E6;}table.cd_render_table tr:nth-child(even){ background:#888888;}table.cd_render_table thead{ background:#000000;}table.cd_render_table thead th{ font-size:15px;font-weight:bold;color:#E6E6E6;text-align:center;border-left:2px solid #4A4A4A;}table.cd_render_table thead th:first-child{ border-left:none;}table.cd_render_table tfoot td{ font-size:12px;}</style>"
   return result;
 }
 /*
