@@ -2,14 +2,14 @@
 
 
 function cd_visulaiz() {
-  var cds = cd_prepVis
+  var cds = cd_prepVis()
   var cd_render = document.getElementsByTagName('cd_render')[0]
  if (cd_render.value == 1){
   cd_render.value = 0
   cd_render.innerHTML = ""
  } else {
   cd_render.value = 1
-  cd_render.innerHTML = cd_makeTableHTML(cd_all())
+  cd_render.innerHTML = cd_makeTableHTML(cds)
 }
  return document.getElementsByTagName('cd_render')[0].value;
 }
