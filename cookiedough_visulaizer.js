@@ -1,6 +1,9 @@
 //cookie = [string,number,number]
 
 function cd_visulaiz_RL(){
+  var cd_visulaiz_interval = setInterval(function(){
+console.log("test")
+  },100)
   document.getElementsByTagName('cd_render')[0].innerHTML = cd_makeTableHTML(cd_prepVis())
 }
 
