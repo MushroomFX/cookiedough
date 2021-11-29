@@ -24,7 +24,7 @@ return cd
 }
 
 function cd_makeTableHTML(myArray) {
-  var result = "<table  class='cd_render_table'>";
+  var result = "<div><table  class='cd_render_table'>";
   result += "<tr><th>Cookie</th><th>Value</th><th>Valid-Time left</th>"
   for(var i=0; i<myArray.length; i++) {
       result += "<tr class='cd_render_tr'>";
@@ -34,7 +34,7 @@ function cd_makeTableHTML(myArray) {
       result += "</tr>";
   }
   result += "</tr>";
-  result += "</table>";
+  result += "</table></div>";
   result+= "<style>table.cd_render_table{font-family:Arial, Helvetica, sans-serif;border:2px solid #18181b;background-color:#242429;width:100%;height:200px;border-collapse:collapse;}table.cd_render_table td, table.cd_render_table th{border:1px solid #3b3b44;padding:1em;text-align:center;}table.cd_render_table tbody td{font-size:13px;color:#E6E6E6;text-align:left;}table.cd_render_table tr:nth-child(even){background:#2f2f37;}table.cd_render_table thead{background:#000000;}table.cd_render_table thead th{font-size:15px;font-weight:bold;color:#E6E6E6;text-align:center;border-left:2px solid #4A4A4A;}table.cd_render_table thead th:first-child{border-left:none;}table.cd_render_table tfoot td{font-size:12px;}</style>"
   return result;
 }
