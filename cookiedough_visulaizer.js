@@ -9,7 +9,7 @@ function cd_visulaiz() {
   cd_render.innerHTML = ""
  } else {
   cd_render.value = 1
-  cd_render.innerHTML = cd_makeTableHTML(cds)
+  cd_render.innerHTML = cd_makeTableHTML(cd_all())
 }
  return document.getElementsByTagName('cd_render')[0].value;
 }
