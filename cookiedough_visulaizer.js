@@ -4,16 +4,19 @@ function cd_visulaiz() {
   var cds = cd_prepVis()
   var cd_render = document.getElementsByTagName('cd_render')[0]
  if (cd_render.value == 1){
-   
-  clearInterval(cd_visulaiz_interval)
   cd_render.value = 0
   cd_render.innerHTML = ""
  } else {
   cd_render.value = 1
   var cd_visulaiz_interval = setInterval(function(){
+    if (cd_render.value == 0) {
+      clearInterval(cd_visulaiz_interval)
+    } else{
     document.getElementsByTagName('cd_render')[0].innerHTML = cd_makeTableHTML(cd_prepVis())
+    }
   },100)
-}
+  }
+
  return document.getElementsByTagName('cd_render')[0].value;
 }
 
