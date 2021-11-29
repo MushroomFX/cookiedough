@@ -24,11 +24,11 @@ return cd
 }
 
 function cd_makeTableHTML(myArray) {
-  var result = "<table border=1>";
+  var result = "<table  class='cd_render_table'>";
   for(var i=0; i<myArray.length; i++) {
-      result += "<tr>";
+      result += "<tr class='cd_render_tr'>";
       for(var j=0; j<myArray[i].length; j++){
-          result += "<td>"+myArray[i][j]+"</td>";
+          result += "<td class='cd_render_td'>"+myArray[i][j]+"</td>";
       }
       result += "</tr>";
   }
@@ -36,3 +36,42 @@ function cd_makeTableHTML(myArray) {
 
   return result;
 }
+/*
+table.cd_render_table {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid #000000;
+  background-color: #4A4A4A;
+  width: 100%;
+  height: 200px;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.cd_render_table td, table.cd_render_table th {
+  border: 1px solid #4A4A4A;
+  padding: 3px 3px;
+}
+table.cd_render_table tbody td {
+  font-size: 13px;
+  color: #E6E6E6;
+}
+table.cd_render_table tr:nth-child(even) {
+  background: #888888;
+}
+table.cd_render_table thead {
+  background: #000000;
+}
+table.cd_render_table thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #E6E6E6;
+  text-align: center;
+  border-left: 2px solid #4A4A4A;
+}
+table.cd_render_table thead th:first-child {
+  border-left: none;
+}
+
+table.cd_render_table tfoot td {
+  font-size: 12px;
+}
+*/
