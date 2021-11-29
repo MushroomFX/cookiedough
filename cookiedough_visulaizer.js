@@ -24,7 +24,7 @@ return cd
 }
 
 function cd_makeTableHTML(myArray) {
-  var result = "<div style='width:100vw;height:100vh;background:#80808080;backdrop-filter:blur(2px);top:0;left:0px;position:absolute;'><table  class='cd_render_table'>";
+  var result = "<div style='width:100vw;height:100vh;background:#40404880;backdrop-filter:blur(2px);top:0;left:0px;position:absolute;'><table  class='cd_render_table'>";
   result += "<tr><th>Cookie</th><th>Value</th><th>Valid-Time left</th>"
   for(var i=0; i<myArray.length; i++) {
       result += "<tr class='cd_render_tr'>";
