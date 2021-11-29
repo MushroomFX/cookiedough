@@ -14,7 +14,7 @@ function cd_visulaiz() {
     } else{
     document.getElementsByTagName('cd_render')[0].innerHTML = cd_makeTableHTML(cd_prepVis())
     }
-  },100)
+  },250)
   }
 
  return document.getElementsByTagName('cd_render')[0].value;
