@@ -18,7 +18,7 @@ function cd_prepVis(){
 var cd = cd_all()
 for (i=0;i<cd.length;i++){
   var now = +new Date();
-  cd[i][2] = cd[i][2] - now
+  cd[i][2] = cd[i][2] - now +"ms"
 }
 return cd
 }
