@@ -1,6 +1,7 @@
 //cookie = [string,number,number]
 
 function cd_visulaiz(revis) {
+  console.log(revis)
   if (revis==true){
     cd_render.value = 0
   }

@@ -9,11 +9,11 @@ function cd_rm(name) {
   }
   function cd_rm_vis(name) {
     var cookie = localStorage.getItem(name);
-    if (cookie === null) {
-      return 'couldnt find a cookie named: "' + name + '"';
-    } else {
+    // if (cookie === null) {
+      // return 'couldnt find a cookie named: "' + name + '"';
+    // } else {
       localStorage.removeItem(name);
       return cookie;
-    }
-    cd_visulaiz(true)
+    // }
+    cd_visulaiz(true);
   }
