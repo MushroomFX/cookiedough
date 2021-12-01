@@ -32,7 +32,7 @@ for (i=0;i<cd.length;i++){
   var func = "'"+cd[i][0]+"'"
   cd[i].push('<input type="button" value="✖" class="cd_btn_inactive_clr" style="transform:translate(4.5vw)" onclick="cd_rm_vis('+func+')">')
 }
-return cd
+return cd;
 }
 
 function cd_makeTableHTML(myArray) {
