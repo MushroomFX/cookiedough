@@ -47,7 +47,13 @@ function cd_makeTableHTML(myArray) {
       result += "</tr>";
   }
   result += "</tr>";
-  result += "<tr><th><input placeholder='name' class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input type='number' placeholder='Value' class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input placeholder='[12,34,56]' class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input value='Submit' type='button' class='cd_render_input cd_btn_active_clr cd_btn_fill'></th>"
+  result += "<tr><th><input placeholder='name' class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input type='number' placeholder='Value' class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input placeholder='12,34,56' class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input value='Submit' type='button' class='cd_render_input cd_btn_active_clr cd_btn_fill' onclick='cd_render_inputFormater()'></th>"
   result += "</table></div>";
   return result;
+}
+function cd_render_inputFormater(){
+  var first= document.getElementsByClassName('cd_render_input')[0].value;
+  var second = document.getElementsByClassName('cd_render_input')[1].value;
+  var third= document.getElementsByClassName('cd_render_input')[2].value.split(",")
+  cd_set_vis(first,second,third)
 }
