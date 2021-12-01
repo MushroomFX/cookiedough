@@ -13,7 +13,7 @@ function cd_rm(name) {
       // return 'couldnt find a cookie named: "' + name + '"';
     // } else {
       localStorage.removeItem(name);
+      cd_visulaiz(true);
       return cookie;
     // }
-    cd_visulaiz(true);
   }
