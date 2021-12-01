@@ -28,7 +28,7 @@ function cd_prepVis(){
 var cd = cd_all()
 for (i=0;i<cd.length;i++){
   var now = +new Date();
-  cd[i][2] = cd[i][2] - now +"ms"
+  cd[i][2] = cd_time_msFormact(cd[i][2] - now)
   var func = "'"+cd[i][0]+"'"
   var func2 = "'"+cd[i][0]+"'"
   cd[i].push('<input type="button" value="✖" class="cd_btn_inactive_clr" style="transform:translate(0em)" onclick="cd_rm_vis('+func+')"><input type="button" value="🖊" class="cd_btn_passive_clr" style="transform:translate(1.5em)" onclick="cd_edit('+func2+')">')
@@ -47,7 +47,7 @@ function cd_makeTableHTML(myArray) {
       result += "</tr>";
   }
   result += "</tr>";
-  result += "<tr><th><input class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input value='Submit' type='button' class='cd_render_input cd_btn_active_clr cd_btn_fill'></th>"
+  result += "<tr><th><input placeholder='name' class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input type='number' placeholder='Value' class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input placeholder='[12,34,56]' class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input value='Submit' type='button' class='cd_render_input cd_btn_active_clr cd_btn_fill'></th>"
   result += "</table></div>";
   return result;
 }

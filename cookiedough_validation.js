@@ -15,7 +15,7 @@ function cd_validation() {
     return [valids,unvalids]
   }
   
-  function msFormat(input) {
+  function cd_time_msFormact(input) {
     console.log(input);
   
     var milliseconds = parseInt(input % 1000),
@@ -56,7 +56,7 @@ function cd_validation() {
       var now = +new Date();
         var cdt = cds[i][2]
         var cd = cds[i][0]
-      times.push([cd,msFormat(cdt-now)])
+      times.push([cd,cd_time_msFormact(cdt-now)])
       }
       return times
     } else{
