@@ -46,6 +46,8 @@ function cd_makeTableHTML(myArray) {
       result += "</tr>";
   }
   result += "</tr>";
+  
+  result += "<tr><th>Cookie</th><th>Value</th><th>Valid-Time left</th><</th>"
   result += "</table></div>";
   return result;
 }
