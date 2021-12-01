@@ -8,13 +8,13 @@ function cd_visulaiz() {
   cd_render.innerHTML = ""
  } else {
   cd_render.value = 1
-  var cd_visulaiz_interval = setInterval(function(){
+  // var cd_visulaiz_interval = setInterval(function(){
     if (cd_render.value == 0) {
       clearInterval(cd_visulaiz_interval)
     } else{
     document.getElementsByTagName('cd_render')[0].innerHTML = cd_makeTableHTML(cd_prepVis())
     }
-  },500)
+  // },500)
   }
 
  return document.getElementsByTagName('cd_render')[0].value;
@@ -25,13 +25,15 @@ var cd = cd_all()
 for (i=0;i<cd.length;i++){
   var now = +new Date();
   cd[i][2] = cd[i][2] - now +"ms"
+  var func = "'"+cd[i][0]+"'"
+  cd[i].push('<input type="button" value="✖" class="cd_btn_inactive_clr" onclick="cd_rm('+func+')">')
 }
 return cd
 }
 
 function cd_makeTableHTML(myArray) {
   var result = "<div style='width:100vw;height:100vh;background:#40404880;backdrop-filter:blur(2px);top:0;left:0px;position:absolute;'><table  class='cd_render_table'>";
-  result += "<tr><th>Cookie</th><th>Value</th><th>Valid-Time left</th>"
+  result += "<tr><th>Cookie</th><th>Value</th><th>Valid-Time left</th><th>Remove</th>"
   for(var i=0; i<myArray.length; i++) {
       result += "<tr class='cd_render_tr'>";
       for(var j=0; j<myArray[i].length; j++){
