@@ -18,7 +18,7 @@ function import_cookiedough_lib() {
       sub_script.src = src;
       document.head.appendChild(sub_script);
     }
-    document.body.innerHTML += "<cd_render></cd_render>"
+    document.body.innerHTML += '<cd_render></cd_render><link rel="stylesheet" href="style.css">'
   }
 
   
