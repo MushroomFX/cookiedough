@@ -3,8 +3,8 @@
 function cd_visulaiz(revis) {
   console.log(revis)
   if (revis==true){
-    cd_render.value = 0
-  }
+    document.getElementsByTagName('cd_render')[0].innerHTML = cd_makeTableHTML(cd_prepVis())
+  } else {
   var cds = cd_prepVis()
   var cd_render = document.getElementsByTagName('cd_render')[0]
  if (cd_render.value == 1){
@@ -19,7 +19,7 @@ function cd_visulaiz(revis) {
     document.getElementsByTagName('cd_render')[0].innerHTML = cd_makeTableHTML(cd_prepVis())
     }
   // },500)
-  
+}
 }
  return document.getElementsByTagName('cd_render')[0].value;
 }
