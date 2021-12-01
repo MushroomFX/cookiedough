@@ -31,7 +31,7 @@ for (i=0;i<cd.length;i++){
   cd[i][2] = cd[i][2] - now +"ms"
   var func = "'"+cd[i][0]+"'"
   var func2 = "'"+cd[i][0]+"'"
-  cd[i].push('<input type="button" value="✖" class="cd_btn_inactive_clr" style="transform:translate(4.5vw)" onclick="cd_rm_vis('+func+')"><input type="button" value="✖" class="cd_btn_inactive_clr" style="transform:translate(4.5vw)" onclick="cd_edit('+func2+')">')
+  cd[i].push('<input type="button" value="✖" class="cd_btn_inactive_clr" style="transform:translate(0em)" onclick="cd_rm_vis('+func+')"><input type="button" value="🖊" class="cd_btn_passive_clr" style="transform:translate(1.5em)" onclick="cd_edit('+func2+')">')
 }
 return cd;
 }
@@ -47,6 +47,7 @@ function cd_makeTableHTML(myArray) {
       result += "</tr>";
   }
   result += "</tr>";
+  result += "<tr><th><input class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input class='cd_render_input cd_btn_passive_clr cd_btn_fill'></th><th><input value='Submit' type='button' class='cd_render_input cd_btn_active_clr cd_btn_fill'></th>"
   result += "</table></div>";
   return result;
 }

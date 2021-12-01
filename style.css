@@ -77,13 +77,21 @@ table.cd_render_table {
     align-items: center;
     justify-content: center;
   }
-  input.cd_btn_general {
-    border-radius: 0.5em;
+  input.cd_render_input {
+    border-radius: 0.25em;
     -webkit-box-shadow: 0px 0px 5px 0px #000000,
       inset 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 5px 0px #000000,
       inset 0px 0px 50px 0px rgba(255, 255, 255, 0.1);
+      -webkit-transition: all 0.5s 0s ease;
+-moz-transition: all 0.5s 0s ease;
+-o-transition: all 0.5s 0s ease;
+transition: all 0.5s 0s ease;
   }
+  input.cd_render_input:focus  {
+    border:solid white 1px;
+    outline: none;
+}
   input.cd_btn_passive_clr {
     color: white;
     background-color: hsl(200deg 75% 25%);
@@ -99,4 +107,9 @@ table.cd_render_table {
     background-color: hsl(0deg 75% 25%);
     border: 1px hsl(0deg 75% 35%) solid;
   }
-  
+  input.cd_btn_fill{
+    width: 100%;
+    padding: .5em;
+    text-align: center;
+    font-weight: 700;
+  }
