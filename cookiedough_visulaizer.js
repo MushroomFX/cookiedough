@@ -29,9 +29,9 @@ var cd = cd_all()
 for (i=0;i<cd.length;i++){
   var now = +new Date();
   cd[i][2] = cd_time_msFormact(cd[i][2] - now)
-  var cd_ = cd[i][2].split(':').join(',')
+  var cd_ = cd[i][2].replaceAll(':', ';');
   var func = "'"+cd[i][0]+"'"
-  var func_ = "'"+ cd[i][0]+","+cd[i][1]+","+cd_[i][2] +"'"
+  var func_ = "'"+ cd[i][0]+"',"+cd[i][1]+",["+cd_[i][2] +"]"
   cd[i].push('<input type="button" value="✖" class="cd_btn_inactive_clr" style="transform:translate(0em)" onclick="cd_rm_vis('+func+')"><input type="button" value="🖊" class="cd_btn_passive_clr" style="transform:translate(1.5em)" onclick="cd_edit('+func_+')">')
 }
 return cd;
