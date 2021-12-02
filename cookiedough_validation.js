@@ -28,6 +28,7 @@ function cd_validation() {
     seconds = seconds < 10 ? "0" + seconds : seconds;
   
     var time = hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+    var time = time.replaceAll('-', '');
     return time;
   }
   
