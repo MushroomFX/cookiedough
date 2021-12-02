@@ -62,7 +62,6 @@ function cd_render_inputFormater(){
 }
 
 function cd_render_edit_toInput(name,value,time){
-// alert(name+"|"+value+"|"+time)
 document.getElementsByClassName('cd_render_input')[0].value = name 
 document.getElementsByClassName('cd_render_input')[1].value = value
 document.getElementsByClassName('cd_render_input')[2].value = time

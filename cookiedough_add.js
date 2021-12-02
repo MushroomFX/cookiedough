@@ -13,6 +13,5 @@ function cd_set(name, value, time) {
     ms -= 5400000
     var cookie = [name, value, now + ms];
     localStorage.setItem(name, cookie);
-    alert(name+""+cookie)
     cd_visulaiz(true);
   }
