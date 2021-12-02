@@ -29,10 +29,12 @@ var cd = cd_all()
 for (i=0;i<cd.length;i++){
   var now = +new Date();
   cd[i][2] = cd_time_msFormact(cd[i][2] - now)
-  var cd_ = cd[i][2].replaceAll(':', ';');
+  var cd_ = cd[i][2].replaceAll(':', ',');
+  var cd_ = cd_.replaceAll('-', '');
+  var cd_ = cd_.substring(0, cd_.indexOf('.'));
   var func = "'"+cd[i][0]+"'"
-  var func_ = "'"+ cd[i][0]+"',"+cd[i][1]+",["+cd_[i][2] +"]"
-  cd[i].push('<input type="button" value="✖" class="cd_btn_inactive_clr" style="transform:translate(0em)" onclick="cd_rm_vis('+func+')"><input type="button" value="🖊" class="cd_btn_passive_clr" style="transform:translate(1.5em)" onclick="cd_edit('+func_+')">')
+  var func_ = "'"+ cd[i][0]+"',"+cd[i][1]+",["+cd_ +"]"
+  cd[i].push('<input type="button" value="✖" class="cd_btn_inactive_clr" style="transform:translate(0em)" onclick="cd_rm_vis('+func+')"><input type="button" value="🖊" class="cd_btn_passive_clr" style="transform:translate(1.5em)" onclick="cd_render_edit_toInput('+func_+')">')
 }
 return cd;
 }
@@ -57,4 +59,8 @@ function cd_render_inputFormater(){
   var second = document.getElementsByClassName('cd_render_input')[1].value;
   var third= document.getElementsByClassName('cd_render_input')[2].value.split(",")
   cd_set_vis(first,second,third)
+}
+
+function cd_render_edit_toInput(name,value,time){
+console.log(name+"|"+value+"|"+time)
 }
