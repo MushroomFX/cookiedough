@@ -28,7 +28,8 @@ function cd_prepVis(){
 var cd = cd_all()
 for (i=0;i<cd.length;i++){
   var now = +new Date();
-  cd[i][2] = cd_time_msFormact(cd[i][2] - now)
+  cd[i][2] = cd_time_msFormact(cd[i][2]*1 - now)
+  alert(cd[i][2] - now)
   var cd_ = cd[i][2].replaceAll(':', ',');
   var cd_ = cd_.replaceAll('-', '');
   var cd_ = cd_.substring(0, cd_.indexOf('.'));

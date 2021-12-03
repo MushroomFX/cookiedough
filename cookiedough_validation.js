@@ -19,11 +19,19 @@ function cd_validation() {
     console.log(input);
     var now = +new Date();
   
-    var milliseconds = input;
-
-    seconds = Math.floor(input / 1000);
+    var ms = input;
+    seconds = Math.floor(ms / 1000);
     minutes = Math.floor(seconds / 60);
     hours = Math.floor(minutes / 60);
+    
+    minutes -= hours * 60
+    seconds -= minutes * 60
+
+    milliseconds = input.toString().slice(-3)
+    seconds = "00"+seconds
+    seconds = seconds.toString().slice(-2)
+    minutes = "00"+minutes
+    minutes = minutes.toString().slice(-2)
 
 
     // var milliseconds = parseInt(input % 1000),
