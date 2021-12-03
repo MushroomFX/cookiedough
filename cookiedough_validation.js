@@ -17,15 +17,23 @@ function cd_validation() {
   
   function cd_time_msFormact(input) {
     console.log(input);
+    var now = +new Date();
   
-    var milliseconds = parseInt(input % 1000),
-      seconds = parseInt((input / 1000) % 60),
-      minutes = parseInt((input / (1000 * 60)) % 60),
-      hours = parseInt((input / (1000 * 60 * 60)) % 24);
+    var milliseconds = input;
+
+    seconds = Math.floor(input / 1000);
+    minutes = Math.floor(seconds / 60);
+    hours = Math.floor(minutes / 60);
+
+
+    // var milliseconds = parseInt(input % 1000),
+    //   seconds = parseInt((input / 1000) % 60),
+    //   minutes = parseInt((input / (1000 * 60)) % 60),
+    //   hours = parseInt((input / (1000 * 60 * 60)) % 24);
   
-    hours = hours < 10 ? "0" + hours : hours;
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
+    // hours = hours < 10 ? "0" + hours : hours;
+    // minutes = minutes < 10 ? "0" + minutes : minutes;
+    // seconds = seconds < 10 ? "0" + seconds : seconds;
   
     var time = hours + ":" + minutes + ":" + seconds + "." + milliseconds;
     var time = time.replaceAll('-', '');
