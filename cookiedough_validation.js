@@ -16,7 +16,6 @@ function cd_validation() {
   }
   
   function cd_time_msFormact(input) {
-    console.log(input);
     var now = +new Date();
   
   var ms = input * 1;
@@ -33,7 +32,8 @@ function cd_validation() {
   minutes = minutes.toString().slice(-2);
 
     var time = hours + ":" + minutes + ":" + seconds + "." + milliseconds;
-    var time = time.replaceAll('-', '');
+    // var time = time.replaceAll('-', '');
+    alert(time)
     return time;
   }
   
