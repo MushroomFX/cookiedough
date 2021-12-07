@@ -16,8 +16,6 @@ table.cd_render_table {
     border: 1px solid #3b3b44;
     padding: 1em;
     text-align: center;
-    /* animation-name: cookiedough_A_loadslide;
-    animation-duration: .25s; */
   }
   
   table.cd_render_table tbody td {
@@ -85,13 +83,5 @@ transition: all 0.5s 0s ease;
     padding: .5em;
     text-align: center;
     font-weight: 700;
+    
   }
-/* 
-  @keyframes cookiedough_A_loadslide {
-    0%   {
-  
-      transform: translate(0px, 50%);
-      opacity: 0;
-    }
-    100% {}
-  } */
